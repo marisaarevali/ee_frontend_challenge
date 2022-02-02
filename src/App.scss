@@ -1,0 +1,221 @@
+@import './Breakpoints/breakpoints.scss';
+@import './variables';
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+
+
+
+@mixin flexCenter {
+  margin-top: 25px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin buttonIcon($iconColor) {
+  height: 32px;
+  width: 64px;
+  border-radius: 8%;
+  background-color: $iconColor;
+  margin-bottom: 2px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin buttonButton {
+  margin-right: 32px;
+  border-radius: 8px;
+  background-color: transparent;
+  border: 1px solid $btncolor;
+  color: $btncolor;
+  font-family: $fontFamily;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  line-height: 1.7;
+}
+
+body {
+  background: $bgcolor;
+}
+
+.App-container { 
+  @include flexCenter();
+  text-align: center;
+}
+
+
+.flex-item {
+  border: 1px solid #7BF762;
+  box-sizing: border-box;
+  border-radius: 8px;
+
+  @include media('<=tablet'){
+  }
+  @include media('>tablet' ){
+  }
+  @include media('>desktop' ){
+    width: 944px;
+  }
+}
+
+.heading-text {
+  margin-top: 40px;
+  font-family: $fontFamily;
+  color: #7BF762;
+  font-size: 24px;
+  letter-spacing: 0.2em;
+  line-height: 32px;
+}
+
+// buttons 
+.select-box {
+  text-align: left;
+  margin-left: 32px;
+ 
+  }
+
+
+.optionPackageBtn {
+  display: flex;
+}
+
+//text above buttons
+.select-text {
+  font-family: $fontFamily;
+  color: #7BF762;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0.1em;
+}
+
+
+
+
+
+
+
+
+//button for color select
+.clrBtnNotClicked {
+  width: 160px;
+  height: 112px;
+  @include buttonButton(); 
+}
+.clrBtnClicked {
+  width: 160px;
+  height: 112px;
+  @include buttonButton();
+  border: 1px solid $btncolorselect;
+  color: $btncolorselect;
+}
+//button for power
+.pwrBtnNotClicked {
+  width: 160px;
+  height: 64px;
+  @include buttonButton();
+}
+.pwrBtnClicked {
+  width: 160px;
+  height: 64px;
+  @include buttonButton();
+  border: 1px solid $btncolorselect;
+  color: $btncolorselect;
+}
+//warp button
+.warpBtnNotClicked {
+  width: 160px;
+  height: 64px;
+  @include buttonButton(); 
+}
+.warpBtnClicked {
+  width: 160px;
+  height: 64px;
+  @include buttonButton();
+  border: 1px solid $btncolorselect;
+  color: $btncolorselect;
+}
+
+//option package button
+.optBtnNotClicked {
+  width: 160px;
+  height: 192px;
+  @include buttonButton(); 
+  list-style: none;
+}
+.optBtnClicked {
+  width: 160px;
+  height: 192px;
+  @include buttonButton();
+  border: 1px solid $btncolorselect;
+  color: $btncolorselect;
+  list-style: none;
+}
+
+
+
+// icon colors
+.Snow {
+  @include buttonIcon(#FFF)
+}
+.Volcano {
+  @include buttonIcon(#FF7A00)
+}
+.Sky {
+  @include buttonIcon(#6BE4FF)
+}
+
+
+.optionTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+
+
+.optionIcon {
+  height: 129px;
+  width: 160px;
+  background-color: #1C3C16;
+  border-radius: 8px;
+}
+
+.optionIconText {
+  margin-top: 15px;
+}
+
+.includesText {
+  list-style: none;
+  font-size: 11px;
+  letter-spacing: 0em;
+  margin-left: -25px;
+  line-height: 10px;
+  margin-top: 10px;
+}
+
+.textonthebutton {
+  margin-top: 15px;
+  margin-left: 30px;
+}
+.totalBox {
+  height: 240px;
+  width: 304px;
+  background-color: #1C3C16;
+  border-radius: 8px;
+  border: 1px solid $btncolorselect;
+}
+
+
+.container {
+ 
+}
+
+
+
+
+
+
+
+

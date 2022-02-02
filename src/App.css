@@ -1,0 +1,264 @@
+/**
+*
+* Testing
+*
+**/
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
+body {
+  background: #051544;
+}
+
+.App-container {
+  margin-top: 25px;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.flex-item {
+  border: 1px solid #7BF762;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 8px;
+}
+
+@media (min-width: 945px) {
+  .flex-item {
+    width: 944px;
+  }
+}
+
+.heading-text {
+  margin-top: 40px;
+  font-family: "Roboto Mono", monospace;
+  color: #7BF762;
+  font-size: 24px;
+  letter-spacing: 0.2em;
+  line-height: 32px;
+}
+
+.select-box {
+  text-align: left;
+  margin-left: 32px;
+}
+
+.optionPackageBtn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.select-text {
+  font-family: "Roboto Mono", monospace;
+  color: #7BF762;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0.1em;
+}
+
+.clrBtnNotClicked {
+  width: 160px;
+  height: 112px;
+  margin-right: 32px;
+  border-radius: 8px;
+  background-color: transparent;
+  border: 1px solid #5A8F4F;
+  color: #5A8F4F;
+  font-family: "Roboto Mono", monospace;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  line-height: 1.7;
+}
+
+.clrBtnClicked {
+  width: 160px;
+  height: 112px;
+  margin-right: 32px;
+  border-radius: 8px;
+  background-color: transparent;
+  border: 1px solid #5A8F4F;
+  color: #5A8F4F;
+  font-family: "Roboto Mono", monospace;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  line-height: 1.7;
+  border: 1px solid #7BF762;
+  color: #7BF762;
+}
+
+.pwrBtnNotClicked {
+  width: 160px;
+  height: 64px;
+  margin-right: 32px;
+  border-radius: 8px;
+  background-color: transparent;
+  border: 1px solid #5A8F4F;
+  color: #5A8F4F;
+  font-family: "Roboto Mono", monospace;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  line-height: 1.7;
+}
+
+.pwrBtnClicked {
+  width: 160px;
+  height: 64px;
+  margin-right: 32px;
+  border-radius: 8px;
+  background-color: transparent;
+  border: 1px solid #5A8F4F;
+  color: #5A8F4F;
+  font-family: "Roboto Mono", monospace;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  line-height: 1.7;
+  border: 1px solid #7BF762;
+  color: #7BF762;
+}
+
+.warpBtnNotClicked {
+  width: 160px;
+  height: 64px;
+  margin-right: 32px;
+  border-radius: 8px;
+  background-color: transparent;
+  border: 1px solid #5A8F4F;
+  color: #5A8F4F;
+  font-family: "Roboto Mono", monospace;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  line-height: 1.7;
+}
+
+.warpBtnClicked {
+  width: 160px;
+  height: 64px;
+  margin-right: 32px;
+  border-radius: 8px;
+  background-color: transparent;
+  border: 1px solid #5A8F4F;
+  color: #5A8F4F;
+  font-family: "Roboto Mono", monospace;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  line-height: 1.7;
+  border: 1px solid #7BF762;
+  color: #7BF762;
+}
+
+.optBtnNotClicked {
+  width: 160px;
+  height: 192px;
+  margin-right: 32px;
+  border-radius: 8px;
+  background-color: transparent;
+  border: 1px solid #5A8F4F;
+  color: #5A8F4F;
+  font-family: "Roboto Mono", monospace;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  line-height: 1.7;
+  list-style: none;
+}
+
+.optBtnClicked {
+  width: 160px;
+  height: 192px;
+  margin-right: 32px;
+  border-radius: 8px;
+  background-color: transparent;
+  border: 1px solid #5A8F4F;
+  color: #5A8F4F;
+  font-family: "Roboto Mono", monospace;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  line-height: 1.7;
+  border: 1px solid #7BF762;
+  color: #7BF762;
+  list-style: none;
+}
+
+.Snow {
+  height: 32px;
+  width: 64px;
+  border-radius: 8%;
+  background-color: #FFF;
+  margin-bottom: 2px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.Volcano {
+  height: 32px;
+  width: 64px;
+  border-radius: 8%;
+  background-color: #FF7A00;
+  margin-bottom: 2px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.Sky {
+  height: 32px;
+  width: 64px;
+  border-radius: 8%;
+  background-color: #6BE4FF;
+  margin-bottom: 2px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.optionTitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+}
+
+.optionIcon {
+  height: 129px;
+  width: 160px;
+  background-color: #1C3C16;
+  border-radius: 8px;
+}
+
+.optionIconText {
+  margin-top: 15px;
+}
+
+.includesText {
+  list-style: none;
+  font-size: 11px;
+  letter-spacing: 0em;
+  margin-left: -25px;
+  line-height: 10px;
+  margin-top: 10px;
+}
+
+.textonthebutton {
+  margin-top: 15px;
+  margin-left: 30px;
+}
+
+.totalBox {
+  height: 240px;
+  width: 304px;
+  background-color: #1C3C16;
+  border-radius: 8px;
+  border: 1px solid #7BF762;
+}
+/*# sourceMappingURL=App.css.map */
