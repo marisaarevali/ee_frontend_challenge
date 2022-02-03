@@ -30,8 +30,8 @@ export const Power = (props: PowerListProps) => {
 
 
     return (
-        <div className='select-box'>
-            <p className='select-text'>Select power:</p>
+        <div >
+            
             {props.powers.map(power => {
                 return (
                     <button

@@ -1,11 +1,10 @@
 import React from 'react';
 import { Color } from './Components/Color';
 import { Total } from './Components/Total';
-import './App.css';
 import { Power } from './Components/Power';
 import { Warp } from './Components/Warp';
 import { Option } from './Components/Option';
-
+import './App.css';
 
 
 function App() {
@@ -71,16 +70,22 @@ function App() {
 
 
   return (
-    <div className="App-container">
-      {/* set line around and everything inside of it */}
-      <div className='flex-item'>
 
-        <Color colors={colorList} />
-        <Power powers={powerList} />
-        <Warp warpDrive={warpDrive} />
-        <Option options={optionPackageList} />
-        <Total />
-      </div>
+    <div className='border'>
+    <div className="wrapper">
+      
+        <div className='box title'>Spaceship configurator</div>
+        <div className='box colorTitle'>Select color:</div>
+        <div className='box color'><Color colors={colorList} /></div>
+        <div className='box total'><Total /></div>
+        <div className='box powerTitle'>Select power:</div>
+        <div className='box power'><Power powers={powerList} /></div>
+        <div className='box warpTitle'>Warp drive:</div>
+        <div className='box warp'><Warp warpDrive={warpDrive} /></div>
+        <div className='box optionOptTitle'>Select option package:</div>
+        <div className='box option'><Option options={optionPackageList} /></div>
+        
+    </div>
     </div>
   );
 }

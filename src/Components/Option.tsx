@@ -12,7 +12,7 @@ type OptionListProps = {
 export const Option = (props: OptionListProps) => {
 
     const [selectedOption, setOption] = useState<string>('Basic');
-    const [optionPrice, setOptionPrice] = useState(0);
+    const [optionPrice, setOptionPrice] = useState<any>(0);
 
     const createOptionPrice = () => {
         // (identifier, data for event)
@@ -33,33 +33,24 @@ export const Option = (props: OptionListProps) => {
 
 
     return (
-        <div className='select-box'>
-            <p className='select-text'>Select option package:</p>
+        <div >
+
             <div className='optionPackageBtn'>
                 {props.options.map(option => {
                     return (
-                        <li
-                            className={selectedOption === option.title ? 'optBtnClicked' : 'optBtnNotClicked'} key={option.title}
+                        <div className={selectedOption === option.title ? 'optBtnClicked' : 'optBtnNotClicked'} key={option.title}
                             onClick={() => {
-                                console.log(option.title)
                                 setOption(option.title)
                                 setOptionPrice(option.price)
-                                
                             }}>
-                            <div className='optionTitle'>{option.title} <br/> +{option.price}€</div>
-
+                            <div className='optionTitle'>{option.title} <br /> +{option.price}€</div>
                             <div className='optionIcon'>
-                                <div className='optionIconText'>
-                                    <div className='textonthebutton'> 
-                                    {option.includes.map((include) => <p className='includesText'>▲ {include}</p>
-                                )}
-                                    </div>
-                                </div>
+                            {option.includes.map((include) => <li>▲ {include}</li>
+                            )}
                             </div>
-                        </li>
+                        </div>
                     )
                 })}</div>
-            {/* <p>selected: {selectedOption}</p> */}
         </div>
     )
 

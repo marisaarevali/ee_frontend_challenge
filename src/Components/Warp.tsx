@@ -25,8 +25,8 @@ export const Warp = (props: WarpListProps) => {
 
 
     return (
-        <div className='select-box'>
-            <p className='select-text'>Select Warp:</p>
+        <div>
+            
             {props.warpDrive.map(warp => {
                 return (
                     <button className={selectedWarp === warp.title ? 'warpBtnClicked' : 'warpBtnNotClicked'} key={warp.title}
