@@ -70,12 +70,13 @@ export const Total = () => {
         <div>
             <div className='totalBox'>
                 <div className='totalsText'>
-                    <p>Base price: {basePrice}€</p>
-                    <p>Color: +{logs}€</p>
-                    <p>Power: +{powerPrice}€</p>
-                    <p>Warp drive: +{warpPrice}€</p>
-                    <p>Option package: +{optionPrice}€</p>
-                    <p>Total: {basePrice+optionPrice+warpPrice+powerPrice+logs}</p>
+                    <p className='totalsPrice'>Base price: <span className='white'>{basePrice}€</span></p>
+                    <p className='totalsPrice'>Color:<span className='white'> +{logs}€</span></p>
+                    <p className='totalsPrice'>Power: <span className='white'>+{powerPrice}€</span></p>
+                    <p className='totalsPrice'>Warp drive:<span className='white'>+{warpPrice}€</span> </p>
+                    <p className='totalsPrice'>Option package:<span className='white'>+{optionPrice}€</span> </p>
+                    <div className='divide'></div>
+                    <p className='totalsPrice total'> Total: <span className='white'>{basePrice+optionPrice+warpPrice+powerPrice+logs}</span></p>
                 </div>
 
 

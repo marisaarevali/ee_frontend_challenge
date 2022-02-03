@@ -3,15 +3,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 
 
-
-
-@mixin flexCenter {
-  margin-top: 25px;
-  display: grid;
-  justify-content: center;
-  align-items: center;
-}
-
 @mixin buttonIcon($iconColor) {
   height: 32px;
   width: 64px;
@@ -34,53 +25,8 @@
   line-height: 1.7;
 }
 
-body {
-  background: $bgcolor;
-}
-
-.App-container { 
-  @include flexCenter();
-  text-align: center;
-}
-
-
-.flex-item {
-  border: 1px solid #7BF762;
-  box-sizing: border-box;
-  border-radius: 8px;
-
-  @include media('<=tablet'){
-  }
-  @include media('>tablet' ){
-  }
-  @include media('>desktop' ){
-    width: 944px;
-  }
-}
-
-.heading-text {
-  margin-top: 40px;
-  font-family: $fontFamily;
-  color: #7BF762;
-  font-size: 24px;
-  letter-spacing: 0.2em;
-  line-height: 32px;
-}
-
-// buttons 
-.select-box {
-  text-align: left;
-  margin-left: 32px;
- 
-  }
-
-
-.optionPackageBtn {
-  display: flex;
-}
-
 //text above buttons
-.select-text {
+@mixin buttonTitleText {
   font-family: $fontFamily;
   color: #7BF762;
   font-style: normal;
@@ -90,12 +36,107 @@ body {
   letter-spacing: 0.1em;
 }
 
+body {
+  background: $bgcolor;
+  display: flex;
+  justify-content: center;
+ 
+}
+
+.border {
+  width: 944px;
+  height: 848px;
+  border: 1px solid $btncolor;
+  border-radius: 5px;
+}
 
 
+//GRID
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr ; 
+  gap: 10px;
+  border-radius: 8px;
+  padding: 32px;
+}
+
+.box {
+  font-size: 100%;
+}
+
+.title {
+  grid-column: 1/4;
+  grid-row: 1;
+  text-align: center;
+  margin-top: 9px;
+  font-family: $fontFamily;
+  color: #7BF762;
+  font-size: 24px;
+  letter-spacing: 0.2em;
+  line-height: 32px;
+}
+
+//colortitle
+.colorTitle {
+  margin-top: 30px;
+  grid-column: 1 / 3;
+  grid-row: 2;
+  @include buttonTitleText();
+}
+//color
+.color {
+  grid-column: 1 / 4;
+  grid-row: 3/5;
+  margin-bottom: 70px;
+}
+//total
+.total {  
+  grid-column: 3/4;
+  grid-row: 3 / 6;
+ 
+}
+
+//powrtitle
+.powerTitle {
+  grid-column: 1/3;
+  grid-row: 4;
+  @include buttonTitleText();
+}
+.power {
+  grid-column: 1 / 4 ;
+  grid-row: 5/6 ;
+  margin-bottom: 35px;
+}
+//warptitle
+.warpTitle {
+  grid-column: 1/3 ;
+  grid-row: 6 ;
+  @include buttonTitleText();
+
+}
+.warp {
+  grid-column: 1/3 ;
+  grid-row: 7 ;
+  margin-bottom: 35px;
+}
+//optiontitle
+.optionOptTitle {
+  grid-column: 1 / 3 ;
+  grid-row: 8 ;
+  @include buttonTitleText();
+}
+
+.option {
+  grid-column: 1/3 ;
+  grid-row: 9;
 
 
+}
 
-
+// buttons 
+.optionPackageBtn {
+  display: flex;
+}
 
 //button for color select
 .clrBtnNotClicked {
@@ -143,6 +184,8 @@ body {
   height: 192px;
   @include buttonButton(); 
   list-style: none;
+  text-align: center;
+  cursor: default;
 }
 .optBtnClicked {
   width: 160px;
@@ -151,6 +194,8 @@ body {
   border: 1px solid $btncolorselect;
   color: $btncolorselect;
   list-style: none;
+  text-align: center;
+  cursor: default;
 }
 
 
@@ -172,6 +217,7 @@ body {
   justify-content: center;
   align-items: center;
   list-style: none;
+  margin-top: 10px;
 }
 
 
@@ -180,42 +226,50 @@ body {
   width: 160px;
   background-color: #1C3C16;
   border-radius: 8px;
-}
-
-.optionIconText {
-  margin-top: 15px;
-}
-
-.includesText {
-  list-style: none;
+  text-align: left;
   font-size: 11px;
-  letter-spacing: 0em;
-  margin-left: -25px;
-  line-height: 10px;
-  margin-top: 10px;
+  list-style: none;
+  margin-top: 5px;
 }
 
-.textonthebutton {
-  margin-top: 15px;
-  margin-left: 30px;
+li {
+  margin-left: 5px;
+  margin-top: 2px;
 }
+
+
 .totalBox {
   height: 240px;
   width: 304px;
   background-color: #1C3C16;
   border-radius: 8px;
   border: 1px solid $btncolorselect;
+  cursor: default;
+}
+
+.totalsText {
+  padding: 0px 10px 10px 10px;
+  color: #7BF762;
+  font-family: $fontFamily;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  letter-spacing: 0.2em;
 }
 
 
-.container {
- 
+.divide {
+  height: 1px;
+  width: 100%;
+  background-color: #7BF762;;
+  margin-top: 15px;
 }
 
+.total{
+  font-size: 18px;
+}
 
-
-
-
-
-
-
+.white {
+  color: #FFF;
+  float: right;
+}

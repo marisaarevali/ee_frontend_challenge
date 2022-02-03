@@ -29,8 +29,8 @@ export const Color = (props: ColorListProps) => {
 
 
     return (
-        <div className='select-box'>
-            <p className='select-text'>Select color:</p>
+        <div>
+            
             {props.colors.map(color => {
                 return (
                     <button
