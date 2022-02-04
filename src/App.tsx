@@ -40,7 +40,7 @@ function App() {
 
   const warpDrive = [
     {
-      title: 'No',
+      title: 'NO',
       price: 0
     },
     {
@@ -67,25 +67,21 @@ function App() {
     }
   ]
 
-
-
   return (
 
     <div className='border'>
-    <div className="wrapper">
-      
+      <div className="wrapper">
         <div className='box title'>Spaceship configurator</div>
-        <div className='box colorTitle'>Select color:</div>
+        <div className='box color-title'>Select color:</div>
         <div className='box color'><Color colors={colorList} /></div>
         <div className='box total'><Total /></div>
-        <div className='box powerTitle'>Select power:</div>
+        <div className='box power-title'>Select power:</div>
         <div className='box power'><Power powers={powerList} /></div>
-        <div className='box warpTitle'>Warp drive:</div>
+        <div className='box warp-title'>Warp drive:</div>
         <div className='box warp'><Warp warpDrive={warpDrive} /></div>
-        <div className='box optionOptTitle'>Select option package:</div>
+        <div className='box option-title'>Select option package:</div>
         <div className='box option'><Option options={optionPackageList} /></div>
-        
-    </div>
+      </div>
     </div>
   );
 }

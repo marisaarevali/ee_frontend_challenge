@@ -8,45 +8,30 @@ type OptionListProps = {
         includes: string[]
     }[]
 }
-
 export const Option = (props: OptionListProps) => {
 
     const [selectedOption, setOption] = useState<string>('Basic');
     const [optionPrice, setOptionPrice] = useState<any>(0);
-
     const createOptionPrice = () => {
-        // (identifier, data for event)
         EventEmitter.emit('NewOptionPrice', optionPrice)
     }
-
-    //create new log after state change
     useEffect(() => {
         createOptionPrice();
     })
-
-
-
-
-
-
-
-
-
     return (
         <div >
-
-            <div className='optionPackageBtn'>
+            <div className='option-package-btn'>
                 {props.options.map(option => {
                     return (
-                        <div className={selectedOption === option.title ? 'optBtnClicked' : 'optBtnNotClicked'} key={option.title}
+                        <div className={selectedOption === option.title ? 'opt-clicked' : 'opt-not-clicked'} key={option.title}
                             onClick={() => {
                                 setOption(option.title)
                                 setOptionPrice(option.price)
                             }}>
-                            <div className='optionTitle'>{option.title} <br /> +{option.price}€</div>
-                            <div className='optionIcon'>
-                            {option.includes.map((include) => <li>▲ {include}</li>
-                            )}
+                            <div className='option-title-text'>{option.title} <br /> +{option.price}€</div>
+                            <div className='option-icon'>
+                                {option.includes.map((include) => <li>▲ {include}</li>
+                                )}
                             </div>
                         </div>
                     )

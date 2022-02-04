@@ -8,46 +8,33 @@ type ColorListProps = {
         price: number
     }[]
 }
-
 export const Color = (props: ColorListProps) => {
 
     const [selectedColor, setColor] = useState('Snow');
     const [colorPrice, setColorPrice] = useState(0);
-
-
-    const createNewLog = () => {
+    const createColorPrice = () => {
         // (identifier, data for event)
-        EventEmitter.emit('NewLog', colorPrice)
+        EventEmitter.emit('NewColorPrice', colorPrice)
     }
-
     //create new log after state change
     useEffect(() => {
-        createNewLog();
+        createColorPrice();
     })
-
-
-
 
     return (
         <div>
-            
             {props.colors.map(color => {
                 return (
-                    <button
-                        className={selectedColor === color.title ? 'clrBtnClicked' : 'clrBtnNotClicked'} key={color.title}
+                    <button className={selectedColor === color.title ? 'clr-clicked' : 'clr-not-clicked'} 
+                        key={color.title}
                         onClick={() => {
                             setColor(color.title)
                             setColorPrice(color.price)
-                            
                         }}>
                         <div className={color.title} ></div>
-                        +{color.price}€ <br /> {color.title}  </button>
+                        +{color.price}€ <br/>{color.title}</button>
                 )
             })}
-
-
-
-
         </div>
     )
 
