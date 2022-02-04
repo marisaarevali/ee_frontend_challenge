@@ -7,29 +7,22 @@ type WarpListProps = {
         price: number
     }[]
 }
-
 export const Warp = (props: WarpListProps) => {
 
-    const [selectedWarp, setWarp] = useState('No');
+    const [selectedWarp, setWarp] = useState('NO');
     const [warpPrice, setWarpPrice] = useState(0);
-
     const createWarpPrice = () => {
         // (identifier, data for event)
         EventEmitter.emit('NewWarpPrice', warpPrice)
     }
-
-    //create new log after state change
     useEffect(() => {
         createWarpPrice();
     })
-
-
     return (
         <div>
-            
             {props.warpDrive.map(warp => {
                 return (
-                    <button className={selectedWarp === warp.title ? 'warpBtnClicked' : 'warpBtnNotClicked'} key={warp.title}
+                    <button className={selectedWarp === warp.title ? 'warp-clicked' : 'warp-not-clicked'} key={warp.title}
                         onClick={() => {
                             setWarp(warp.title)
                             setWarpPrice(warp.price)
